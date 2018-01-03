@@ -78,6 +78,7 @@ public class SwitchwinodowStepDefination {
 	    assertEquals(cw.titile.getText(), "Automation Practice Switch Windows","title matched");
 	}
 
+	
 	@Then("^User will handel the new browser window$")
 	public void user_will_handel_the_new_browser_window() throws Throwable {
 		cw.newBrowserWindow.click();
@@ -105,6 +106,7 @@ public class SwitchwinodowStepDefination {
 	}
 
 
+	
 	@Then("^clciked on the new mesage window$")
 	public void clciked_on_the_new_mesage_window() throws Throwable {
 		WaitForWebPage.waitFortheElementToBeVisible(driver, cw.messageWindow, 10);
@@ -113,6 +115,7 @@ public class SwitchwinodowStepDefination {
 		
 	}
 
+	
 	@Then("^handeled the new message window$")
 	public void handeled_the_new_message_window() throws Throwable {
 		HandelWindow.handelWindowByNo(driver, 2);
@@ -127,17 +130,17 @@ public class SwitchwinodowStepDefination {
 		test.log(LogStatus.INFO, "coming to the parent window");
 	}
 
+	
 	@When("^clicked on the new browser tab$")
 	public void clicked_on_the_new_browser_tab() throws Throwable {
-		WaitForWebPage.waitFortheElementToBeVisible(driver, cw.browserTab, 10);
-	   cw.browserTab.click();
-	   HandelWindow.handelWindowByNo(driver, 2);
+		 WaitForWebPage.waitFortheElementToBeVisible(driver, cw.browserTab, 10);
+	    cw.browserTab.click();
+	    HandelWindow.handelWindowByNo(driver, 2);
 		test.log(LogStatus.INFO, "new window opened");
-		
-		
-		
 	}
 
+	
+	
 	@Then("^performed some function on the browser tab$")
 	public void performed_some_function_on_the_browser_tab() throws Throwable {
 		ActionFunctions.mouseHoverOnTheElement(driver, cw.tools);
@@ -151,6 +154,8 @@ public class SwitchwinodowStepDefination {
 		test.log(LogStatus.INFO, "clciked on the seleniumtutoraij");
 	}
 
+
+	
 	@Then("^coming back to mainWindow$")
 	public void coming_back_to_mainWindow() throws Throwable {
 		driver.close();
@@ -158,12 +163,14 @@ public class SwitchwinodowStepDefination {
 		HandelWindow.handelWindowByNo(driver, 1);
 	}
 
+	
 	@When("^clicked on the alert box$")
 	public void clicked_on_the_alert_box() throws Throwable {
 		WaitForWebPage.waitFortheElementToBeVisible(driver, cw.alert, 10);
 	   cw.alert.click();
 	}
 
+	
 	@Then("^then handeling the alert$")
 	public void then_handeling_the_alert() throws Throwable {
 	 HandelAlert.radingtextFromAlert(driver);
